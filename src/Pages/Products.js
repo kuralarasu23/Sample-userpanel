@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import acimg from '../imajes/acimg.jpeg'
 import tvimg from '../imajes/tvimg.png'
@@ -7,6 +7,7 @@ import axios from 'axios'
 
 function Products() {
     const apidata = "https://673c4f2196b8dcd5f3f961c0.mockapi.io/Products/sample-admin"
+    const giturl ='https://raw.githubusercontent.com/kuralarasu23/Sample-userpanel/refs/heads/main/src/imajes/acimg.jpeg'
     const[image,setImage]=useState([]);
 
     useEffect(()=>{
@@ -58,7 +59,7 @@ function Products() {
     </Row>
     <Row className='mt-5'>
                     <hr></hr>
-                    <h1 className='text-center mb-5 display-4 mt-2' >Men's Fashions</h1>
+                    <h1 className='text-center mb-5 display-4 mt-2' >Our Products</h1>
                     {image.map((items) => (
                         <Col md={3}>
                             <Card className='products' style={{ width: '100%', border: 'none' }}>
